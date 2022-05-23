@@ -1,8 +1,12 @@
 import React from 'react';
+import PageHeader from "../../components/Header/Header";
 
 
 export default function Home(){
     return(
-        <h1>Hello</h1>
+        <>
+            <PageHeader />
+            <h1>Hello</h1>
+        </>
     )
 }
