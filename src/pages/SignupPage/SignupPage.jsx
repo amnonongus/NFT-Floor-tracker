@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid, Header, Image, Segment, Message } from 'semantic-ui-react'
 import userService from "../../utils/userService";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function SignUpPage(props) {
 
@@ -108,6 +108,9 @@ export default function SignUpPage(props) {
             <Button type="submit" className="btn">
               Signup
             </Button>
+            <Message>
+            Already a User? <Link to="/signup">Login</Link>
+          </Message>
           </Segment>
           {error ? <ErrorMessage error={error} /> : null}
         </Form>
