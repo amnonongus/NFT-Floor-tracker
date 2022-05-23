@@ -109,7 +109,7 @@ export default function SignUpPage(props) {
               Signup
             </Button>
             <Message>
-            Already a User? <Link to="/signup">Login</Link>
+            Already a User? <Link to="/Login">Login</Link>
           </Message>
           </Segment>
           {error ? <ErrorMessage error={error} /> : null}
@@ -118,3 +118,4 @@ export default function SignUpPage(props) {
     </Grid>
   );
 }
+

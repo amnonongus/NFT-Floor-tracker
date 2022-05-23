@@ -1,5 +1,7 @@
 import React from 'react'
-import { Container, Divider } from 'semantic-ui-react'
+import './CardDisplay.css'
+import { Container, Divider, Message, Button } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
 
 export default function CardDisplay() {
     return(
@@ -10,7 +12,14 @@ export default function CardDisplay() {
             <Container textAlign='justified'>
                 <b>Justified</b>
                 <Divider />
+                <p textalign='center' >Here is our website</p>
             </Container>
+            <Button type="submit" className="btn">
+            <Link to="/signup">Sign Up</Link>
+            </Button>
+            <Message>
+            Already a User? <Link to="/login">Login</Link>
+          </Message>
         </div>
     )
 }

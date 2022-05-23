@@ -26,6 +26,11 @@ export default function PageHeader({ user, handleLogout }) {
           ></Image>
         </Link>
       </Header>
+      <Header as= "h2" textAlign="center">
+          <Link to="/LandingPage">
+              <Icon name="home"></Icon>
+          </Link>
+      </Header>
     </Segment>
   );
 }
