@@ -3,7 +3,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
-import Home from "../HomePage/HomePage";
+import Index from "../IndexPage/IndexPage";
+import LandingPage from "../LandingPage/LandingPage";
 import userService from "../../utils/userService";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
   if (user) {
     return (
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<LandingPage />} />
         <Route
           path="/login"
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
@@ -31,6 +32,10 @@ function App() {
         <Route
           path="/signup"
           element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+        />
+        <Route
+          path="/index"
+          element={<Index />}
         />
       </Routes>
     );
